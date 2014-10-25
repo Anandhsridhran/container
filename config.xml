@@ -73,7 +73,7 @@
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="com.ionic.keyboard" version="1.0.2" />
 
-    <icon src="img/icons1.png" />
+    <icon src="img/icon.png" />
     <icon src="img/icons1.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="img/icons1.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="img/icons1.png"   gap:platform="android"    gap:qualifier="hdpi" />
