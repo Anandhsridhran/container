@@ -1,0 +1,14 @@
+<ion-view title="{{title}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <ul class="list" style="background-color:rgb(240,241,248)">
+           
+                <li class="item" id="farmsli{{farm.farm_id}}" ng-repeat="farm in farms" style="background-color:rgb(237,238,247);">
+                    
+                    <a id="{{farm.farm_id}}" class="formanch" style="width:100%;float:left;background-color:rgb(237,238,247);">  <img ng-src='img/{{farm.system_status}}1.png' style='margin-right:10px;float:left;margin-top:3px;'>{{farm.name}}</a>
+                </li>
+        </ul>
+    </ion-content>
+</ion-view>

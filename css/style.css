@@ -1,0 +1,38 @@
+.errorinput {
+color: #850000;
+background: rgba(254, 186, 186, 0.5);
+border: 1px solid #850000;
+}
+
+//.popup-buttons .button
+//{
+//float:none;
+//margin:0 auto;
+//width:20%;
+//
+//}
+
+input[type='text']
+{
+   -webkit-user-select: auto !important;
+  -webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow:none;
+}
+
+a
+{
+text-decoration:none;
+}
+
+.login{
+background-color:rgb(235,236,244);
+}
+
+.bar-home {
+    border-color: #839bcf;
+    background-color: #839bcf;
+    background-image: linear-gradient(0deg, #839bcf, #839bcf 50%, transparent 50%);
+    color: #fff; 
+    
+}

@@ -1,0 +1,57 @@
+<ion-view title="{{title}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader">
+        <h2 class="title" style="color:gray;">{{fname}}-{{lname}}-{{bname}}</h2>
+    </div>
+    <ion-content class="has-header" style="background-color:rgb(235,236,244);margin-top:11%;" >
+        <div style="float:left;width:100%;padding:1%;border:1px dashed black;margin-top:3%;">
+            <div class="row">
+                <div class="col"><span>Last Inventory :{{reported_at}} </span></div>
+            </div>
+            <div class="row">
+                <div class="col col-20">Inv</div>
+                <div class="col col-30">Pig Deaths</div>
+                <div class="col col-30">Sick Pigs</div>
+                <div class="col col-20">Initials</div>
+                
+            </div>
+            <div class="row">
+                <div class="col col-20">{{total_inventory}}</div>
+                <div class="col col-30">{{pig_death}}</div>
+                <div class="col col-30">{{pig_sick}}</div>
+                <div class="col col-20">{{Intials}}</div>
+                
+            </div>
+        </div>
+        <label class="item item-input" style="background-color:rgb(235,236,244);border:none;width:100%;">
+            
+           <div class="input-label" style="font-weight:normal;margin-left:2%;font-size:16px;"> Inventory Date :</div>
+            
+            <input type="date" ng-model="date.text" id="inventoryDate" style="color:blue;"/>
+                </label>
+        <label class="item item-input" style="background-color:rgb(235,236,244);border:none;margin-left:3%;">
+            New Shipment ?
+            
+        </label>
+        <div class="row" style="margin-top:5%;">
+            
+            <div class="col col-50">
+                <!--<a   ng-click="goBack()" style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;">Back</a>-->
+                <a href="#/app/inventory2/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}"  style="border-radius:5px;padding:9% 42.5%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;">Yes</a>
+            </div>
+            <div class="col col-50">
+                <a  style="border-radius:5px;padding:9% 42.5%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;" ng-click="saveDate()">
+                    No
+                </a>
+            </div>
+        </div>
+        
+        
+    </ion-content>
+    <div class="bar bar-footer" style="background-color:rgb(240,241,248);border:none;">
+        <a class="button button-outline button-light" href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" style="background-color:white;color:black;width:80%;margin-left:10%;"> Cancel</a>
+    </div>
+    
+</ion-view>

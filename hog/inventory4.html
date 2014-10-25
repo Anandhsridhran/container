@@ -1,0 +1,41 @@
+<ion-view title="{{title}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader">
+        <h2 class="title" style="color:gray;">{{fname}}-{{lname}}-{{bname}}</h2>
+    </div>
+    <ion-content class="has-header" style="background-color:rgb(235,236,244);margin-top:12%;" >
+        <div style="float:left;width:100%;margin-top:5%">
+            <span style="float:left;width:80%;padding-left:5%;padding-top:3%;">Pig Deaths</span>
+            <input type="text"  id ="pigno" style="float:left;width:16%;margin-top-top:10%;padding-right:4%;" ng-model="pignodeath.text" ng-change="pigdeathsonchange()" valid-number/>
+        </div>
+        <div id="deathPigDiv" class="list" style="margin-top:3%;float:left;width:100%;" >
+            
+            <label class="item item-input item-select" ng-repeat="cargoItem in cargo.CargoItems">
+                <span>Pig {{cargoItem.count}}</span>
+                <select ng-model="cargoItem.LoadPoint" id="reason{{cargoItem.count}}" ng-options="loadPoint.Text for loadPoint in LoadPoints"></select>
+                
+            </label>
+            <!-- <label class="item item-input item-select" ng-repeat="PigDeatil in PigDetails">
+             <div class="input-label">Pig {{PigDeatil.count}}</div>
+             <select  ng-options="color.name for color in colors">
+             
+             </select>
+             <label>-->
+        </div>
+        <div style="padding-bottom:5%;float:left;width:100%;">
+        <a  style="border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;padding-bottom:3%;text-decoration:none;" href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" ng-click="cancelinc()">Cancel</a>
+        
+        <a  style="padding-bottom:3%;border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;text-decoration:none;" ng-click="savepigdeath()">Next</a>
+        </div>
+        <!--<div class="bar bar-footer" style="background-color:rgb(240,241,248);border:none;">
+         <a class="button button-outline button-light" href="#/barnHome/{{barn_id}}" style="background-color:white;color:black;width:80%;margin-left:10%;"> Cancel</button>
+         </div>-->
+
+
+
+    </ion-content>
+    
+
+</ion-view>

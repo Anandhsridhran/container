@@ -1,0 +1,56 @@
+<ion-view title="{{title}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader">
+        <h2 class="title" style="color:gray;">{{fname}}-{{lname}}-{{bname}}</h2>
+    </div>
+    <ion-content class="has-header" style="background-color:rgb(235,236,244);margin-top:12%;" >
+        <div style="float:left;width:100%;padding:1%;border:1px dashed black;margin-top:3%;">
+            <div class="row">
+                <div class="col"><span>Last Inventory :{{reported_at}} </span></div>
+            </div>
+                <div class="row">
+                <div class="col col-20">Inv</div>
+                <div class="col col-30">Pig Deaths</div>
+                <div class="col col-30">Sick Pigs</div>
+                <div class="col col-20">Initials</div>
+                
+            </div>
+            <div class="row">
+                <div class="col col-20">{{total_inventory}}</div>
+                <div class="col col-30">{{pig_death}}</div>
+                <div class="col col-30">{{pig_sick}}</div>
+                <div class="col col-20">{{Intials}}</div>
+                
+            </div>
+        </div>
+        <label class="item item-input" style="background-color:rgb(235,236,244);border:none;">
+            
+                     <div class="input-label" style="font-weight:normal;margin-left:2%;font-size:16px;">  Shipment Date : </div>
+            
+            <input type="date" ng-model="shipmentdate.text" id="shipmentDate" style="color:blue;">
+                </label>
+        <!--<span style="float:left;margin-left:3%;margin-top:5%;"> Date  : {{inventorydate.text}}</span>-->
+        <span style="float:left;width:80%;padding-left:5%;padding-top:3%;">Number of Pigs in Shipment</span>
+        <input type="text" style="float:left;width:16%;margin-top-top:10%;padding-right:4%;" ng-model="pignoshipment.text" valid-number>
+            <input type="text" style="float:left;width:90%;margin-left:5%;margin-right:5%;margin-top:5%;" placeholder="Name of supplier" ng-model="supplier.text">
+                <a  style="padding-bottom:3%;border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;text-decoration:none;" ng-click="submitShipment()" >Submit</a>
+                <a  style="border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;padding-bottom:3%;text-decoration:none;" href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" >Cancel</a>
+                
+                
+                <div class="row" style="margin-top:10%;">
+                    
+                    <div class="col col-50">
+                    </div>
+                    <div class="col col-50">
+                    </div>
+                </div>
+                <!--<div class="bar bar-footer" style="background-color:rgb(240,241,248);border:none;">
+                 <a class="button button-outline button-light" href="#/barnHome/{{barn_id}}" style="background-color:white;color:black;width:80%;margin-left:10%;"> Cancel</button>
+                 </div>-->
+
+                </ion-content>
+    
+
+</ion-view>

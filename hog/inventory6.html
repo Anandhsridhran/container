@@ -1,0 +1,27 @@
+<ion-view title="{{title}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader">
+        <h2 class="title" style="color:gray;">{{fname}}-{{lname}}-{{bname}}</h2>
+    </div>
+    <ion-content class="has-header" style="background-color:rgb(235,236,244);margin-top:12%;" >
+        <div style="float:left;width:100%;margin-top:5%">
+            <span style="float:left;width:80%;padding-left:5%;padding-top:3%;">Pig Treated :</span>
+            <input type="text" style="float:left;width:16%;margin-top-top:10%;padding-right:4%;" ng-model="pigntreated.text" ng-change="pigtreatedonchange()" valid-number />
+        </div>
+        <div id="treatPigDiv" class="list" style="margin-top:3%;float:left;width:100%;">
+            <div class="item" ng-repeat="pigTreat in pigtreatDetails">
+                <div class="input-label">Pig {{pigTreat.count}}</div>
+                <input type="text" ng-model="pigTreat.medicine_given" id="medicine{{pigTreat.count}}" style="border:1px solid #c3c3c3;margin-top:2%;"/>
+                <input type="text" ng-model="pigTreat.dosage" id="dosage{{pigTreat.count}}" style="border:1px solid #c3c3c3;margin-top:2%;"/>
+                <input type="text" ng-model="pigTreat.how_administered" id="route{{pigTreat.count}}" style="border:1px solid #c3c3c3;margin-top:2%;"/>
+            </div>
+        </div>
+        <div style="padding-bottom:5%;float:left;width:100%;">
+        <a  style="border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;padding-bottom:3%;text-decoration:none;" href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" ng-click="cancelinc()">Cancel</a>
+        <a  style="padding-bottom:3%;border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;text-decoration:none;" ng-click="savePigtreatments()" >Review</a>
+        </div>
+    </ion-content>
+    
+</ion-view>
