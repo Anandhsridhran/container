@@ -8,7 +8,7 @@
     <ion-content class="has-header" style="background-color:rgb(235,236,244);margin-top:11%;" >
         <div style="float:left;width:100%;padding:1%;border:1px dashed black;margin-top:3%;">
             <div class="row">
-                <div class="col"><span>Last Inventory :{{reported_at}} </span></div>
+                <div class="col"><span style="color:blue;">Last Inventory :{{reported_at}} </span></div>
             </div>
             <div class="row">
                 <div class="col col-20">Inv</div>
@@ -51,11 +51,11 @@
         </div>
         <input id="review_init" type="text" placeholder="Initials"  style="width:90%;margin-left:5%;border-radius:5px;margin-top:5%;margin-bottom:5%;float:left;"/>
         
-        <div class="row" style="margin-top:10%;padding-bottom:5%;">
+        <div class="row" style="margin-top:10%;">
             
             <div class="col col-40">
                 <!--<a   ng-click="goBack()" style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;">Back</a>-->
-                <a href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;" ng-click="cancelinc()">Cancel</a>
+                <a href="#/app/barnHome/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;">Cancel</a>
             </div>
             <div class="col col-40">
                 <a  style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;" ng-click="submitInventory()">

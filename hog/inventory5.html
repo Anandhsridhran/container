@@ -14,6 +14,7 @@
         <div class="row" style="margin-top:5%;">
             
             <div class="col col-50">
+                <!--<a   ng-click="goBack()" style="border-radius:5px;padding:9% 35%;margin-top:10%;background-color:white;color:black;width:100%;">Back</a>-->
                 <a href="#/app/inventory6/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}"  style="border-radius:5px;padding:9% 42.5%;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;">Yes</a>
             </div>
             <div class="col col-50">
@@ -22,10 +23,16 @@
                 </a>
             </div>
         </div>
+        
+
+        
+        
+        
     </ion-content>
+    
     <div class="bar bar-footer" style="background-color:rgb(240,241,248);border:none;">
-        <a class="button button-outline button-light" href="#/app/barnmanager/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" style="background-color:white;color:black;width:80%;margin-left:10%;text-decoration:none;" ng-click="cancelinc()">
-            Cancel
-        </a>
+        <a class="button button-outline button-light" href="#/app/barnHome/{{barn_id}}/{{bname}}/{{lname}}/{{fname}}" style="background-color:white;color:black;width:80%;margin-left:10%;text-decoration:none;"> Cancel</a>
     </div>
+    
+
 </ion-view>

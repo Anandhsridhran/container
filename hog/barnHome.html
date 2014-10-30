@@ -11,44 +11,42 @@
                 <span style="color:white">{{bname}}</span>
                 </div>
             <a href="#/app/barnHome/{{barnid}}/{{bname}}/{{lname}}/{{fname}}">
-                <!--<div style="float:left;width:5%;margin-top:7%">
-                    <img src="img/refresh-icon.png" style="float:left;"/>
-                </div>-->
-                <div style="margin-top:5%;float:left;width:35%;">
-                    <span style="color:white;font-size:10px;line-height:0px;width:100%;floatleft;">Last Reading </span><span style="color:white;font-size:10px;line-height:0px;width:100%;float:left;margin-top:3px;">{{reported_at| date:'short'}}</span>
-                </div></a>
-            <div style="margin-top:9%;margin-left:10%;float:left;width:40%;">
-                <span style="color:white;font-size:50px;font-weight:bold;margin-top:2%;">{{temp}}&deg; </span>
+            <div style="float:left;width:5%;margin-top:7%">
+                                <img src="img/refresh-icon.png" style="float:left;"/>
+                </div>
+            <div style="margin-top:5%;float:left;width:35%;">
+<span style="color:white;font-size:10px;line-height:0px;width:100%;floatleft;">Last Reading </span><span style="color:white;font-size:10px;line-height:0px;width:100%;float:left;margin-top:3px;">{{reported_at}}</span>
+            </div></a>
+            <div style="margin-top:5%;margin-left:10%;float:left;width:70%;">
+                <span style="color:white;font-size:35px;font-weight:bold;margin-top:2%;">{{temp}}&deg; </span>
                 <span style="color:white;font-size:20px;font-weight:bold;">F</span>
             </div>
-            <div style="margin-top:5%;float:left;width:50%;">
-                <span style="color:white;font-size:30px;"><img style="height:20%;width:20%;" src="img/humudity.png"/>{{hum}} % </span>
+            <div style="margin-top:5%;float:right;width:20%;">
+                <span style="color:white;font-size:20px;">HUM <br/>{{hum}} % </span>
             </div>
         </div>
         <div style="border-bottom:1px solid white;width:90%;float:left;border-top:1px solid white;margin-left:5%;padding-top:3%;margin-top:3%;padding-bottom:5%;height:30%">
             <span style="font-size:13px;float:left;color:white;">Feed :</span><img ng-src='img/{{feed}}1.png' style="float:left;margin-left:2%;"><br/>
                 <span style="font-size:15px;float:left;color:white;">AC Power : </span><img ng-src='img/{{ac}}1.png' style="float:left;margin-left:2%;"><br/>
-                    <span style="font-size:13px;float:left;color:white;width:62%;">Current Inventory : {{total_inventory}}</span>
-                    <span style="font-size:10px;float:left;color:white;width:38%;">{{dayname}} {{report_date}}</span>
-                    <span style="font-size:13px;float:left;color:white;padding-left:15%;width:85%;padding-top:3%;">Dead Pigs : {{pig_death}}</span>
-                    <span style="font-size:13px;float:left;color:white;padding-left:15%;padding-top:3%;">Sick Pigs : {{pig_sick}}</span>
-                    
-                    </div>
-        
+                <span style="font-size:13px;float:left;color:white;width:62%;">Current Inventory : {{total_inventory}}</span>
+                <span style="font-size:10px;float:left;color:white;width:38%;">{{dayname}} {{report_date}}</span>
+                <span style="font-size:13px;float:left;color:white;padding-left:15%;width:85%;padding-top:3%;">Dead Pigs : {{pig_death}}</span>
+                <span style="font-size:13px;float:left;color:white;padding-left:15%;padding-top:3%;">Sick Pigs : {{pig_sick}}</span>
+                
+                </div>
         <div style="padding-left:5%;padding-top:top:5%;height:30%" >
-            <span style="font-size:16px;float:left;color:white;padding-top:3%;width:100%;font-weight:bold">Events</span>
-            <div style="float:left:width:100%;" ng-repeat="barn in eventshistory | reverse">
+            <span style="font-size:16px;float:left;color:white;padding-top:3%;width:100%;">Events</span>
+            <div style="float:left:width:100%;" ng-repeat="barn in eventshistory">
                 <span style="float:left;color:white;width:55%%;padding-top:5%;font-size:14px;">{{barn.description}}</span>
-                <span style="float:left;color:white;width:45%;padding-top:5%;font-size:12px;">{{barn.reported_at | date:'short'}}</span>
+                <span style="float:left;color:white;width:45%;padding-top:5%;font-size:12px;">{{barn.reported_at}}</span>
             </div>
         </div>
-        
-        <div class="row">
+        <div class="row" style="margin-top:10%;">
+            
             <div class="col col-100">
                 <a href="#/app/inventory/{{barnid}}/{{bname}}/{{lname}}/{{fname}}" class="button button-block button-stable"  style="border-radius:5px;
-                    ;background-color:white;color:black;width:100%;text-decoration:none;display:{{inventoryBtnStatus.text}};">Daily Inventory</a>
-            </div>
-        </div>
+                    ;margin-top:10%;background-color:white;color:black;width:100%;text-decoration:none;display:{{inventoryBtnStatus.text}}">Daily Inventory</a>
+                </div></div>
         <!--<a href="#/app/inventory/{{barnid}}/{{bname}}/{{lname}}/{{fname}}" class="button button-block button-stable" style="margin:10% 2% 2% 2%;border-radius:10px;display:{{inventoryBtnStatus.text}}">Daily Inventory</a>-->
     </ion-content>
 </ion-view>

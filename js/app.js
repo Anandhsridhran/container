@@ -34,12 +34,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: "hog/menu.html",
       controller: 'AppCtrl'
     })
-    .state('app.settings', {
-               url: "/settings",
+    .state('app.test', {
+               url: "/test",
                views: {
                'menuContent' :{
-               templateUrl: "hog/settings.html",
-               controller: 'setCtrl'
+               templateUrl: "hog/test.html",
+               controller: 'testCtrl'
            }
         }
     })
@@ -53,43 +53,104 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
     })
         
-    
-    .state('app.load', {
-               url: "/load",
+//    .state('app.login', {
+//        url: "/login",
+//        views: {
+//        'menuContent' :{
+//           templateUrl: "hog/login.html",
+//           controller: 'loginCtrl'
+//         }
+//       }
+//    })
+    .state('app.farms', {
+      url: "/farms",
+      views: {
+        'menuContent' :{
+          templateUrl: "hog/farms.html",
+          controller: 'farmsCtrl'
+        }
+      }
+    })
+    .state('app.ContainerHome', {
+        url: "/ContainerHome/:container_id/:container_name/:site_name/:site_id",
+        views: {
+        'menuContent' :{
+        templateUrl: "hog/ContainerHome.html",
+        controller: 'ContainerHomeCtrl'
+        }
+        }
+    })
+    .state('app.single', {
+      url: "/farms/:farmId",
+      views: {
+        'menuContent' :{
+          templateUrl: "hog/farm.html",
+          controller: 'farmCtrl'
+        }
+      }
+    })
+    .state('app.inventory', {
+           url: "/inventory/:barn_id/:barn_name/:loc_name/:farm_name",
+        views: {
+            'menuContent' :{
+               templateUrl: "hog/inventory.html",
+               controller: 'inventoryCtrl'
+            }
+        }
+    })
+    .state('app.inventory2', {
+        url: "/inventory2/:barn_id/:barn_name/:loc_name/:farm_name",
+        views: {
+            'menuContent' :{
+               templateUrl: "hog/inventory2.html",
+               controller: 'inventoryCtrl'
+            }
+        }
+    })
+    .state('app.inventory3', {
+                      url: "/inventory3/:barn_id/:barn_name/:loc_name/:farm_name",
+                      views: {
+                      'menuContent' :{
+                      templateUrl: "hog/inventory3.html",
+                      controller: 'inventoryCtrl'
+                      }
+                      }
+                      })
+        .state('app.inventory4', {
+               url: "/inventory4/:barn_id/:barn_name/:loc_name/:farm_name",
                views: {
                'menuContent' :{
-               templateUrl: "hog/load.html",
-               controller: 'loadCtrl'
+               templateUrl: "hog/inventory4.html",
+               controller: 'inventoryCtrl'
                }
                }
                })
-    .state('app.list', {
-      url: "/list",
-      views: {
-        'menuContent' :{
-          templateUrl: "hog/list.html",
-          controller: 'listCtrl'
-        }
-      }
-    })
-    .state('app.barnHome', {
-        url: "/barnHome/:barn_id/:barn_name/:loc_name/:farm_name",
-        views: {
-        'menuContent' :{
-        templateUrl: "hog/barnHome.html",
-        controller: 'barnHomeCtrl'
-        }
-        }
-    })
-    .state('app.barn', {
-//      url: "/barn/:barn_id/:barn_name/:location_id/:farm_id",
-        url: "/barn/:barn_id/:barn_name/:loc_name/:farm_name",
-      views: {
-        'menuContent' :{
-          templateUrl: "hog/barndetails.html",
-          controller: 'barnCtrl'
-        }
-      }
-           });
+        .state('app.inventory5', {
+               url: "/inventory5/:barn_id/:barn_name/:loc_name/:farm_name",
+                        views: {
+                        'menuContent' :{
+                        templateUrl: "hog/inventory5.html",
+                        controller: 'inventoryCtrl'
+                        }
+                        }
+                        })
+        .state('app.inventory6', {
+                                 url: "/inventory6/:barn_id/:barn_name/:loc_name/:farm_name",
+                                 views: {
+                                 'menuContent' :{
+                                 templateUrl: "hog/inventory6.html",
+                                 controller: 'inventoryCtrl'
+                                 }
+                                 }
+                                 })
+        .state('app.review', {
+               url: '/review/:barn_id/:barn_name/:loc_name/:farm_name',
+               views: {
+               'menuContent' :{
+               templateUrl: 'hog/review.html',
+               controller: 'reviewCtrl'
+               }
+               }
+               });
     $urlRouterProvider.otherwise('login');
 });

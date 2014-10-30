@@ -5,10 +5,11 @@
     <ion-content class="has-header">
         <ul class="list" style="background-color:rgb(240,241,248)">
            
-                <li class="item" id="farmsli{{farm.farm_id}}" ng-repeat="farm in farms" style="background-color:rgb(237,238,247);">
+                <li class="item" id="sitesli{{site.site_id}}" ng-repeat="site in sites" style="background-color:rgb(237,238,247);">
                     
-                    <a id="{{farm.farm_id}}" class="formanch" style="width:100%;float:left;background-color:rgb(237,238,247);">  <img ng-src='img/{{farm.system_status}}1.png' style='margin-right:10px;float:left;margin-top:3px;'>{{farm.name}}</a>
+                    <a id="{{site.site_id}}" class="formanch" style="width:100%;float:left;background-color:rgb(237,238,247);">  <img ng-src='img/OK1.png' style='margin-right:10px;float:left;margin-top:3px;'>{{site.name}}</a>
                 </li>
+          
         </ul>
     </ion-content>
 </ion-view>
